@@ -19,8 +19,8 @@ script:
 - sudo ./run.sh
 
 after_success:
-- sudo buildah push centos-haskell-builder:latest docker://quay.io/$quayiouser/oraclelinux-haskell-builder:latest
-- sudo buildah push centos-haskell-builder:latest docker://ghcr.io/$quayiouser/oraclelinux-haskell-builder:latest
+- sudo buildah push oraclelinux-haskell-builder:latest docker://quay.io/$quayiouser/oraclelinux-haskell-builder:latest
+- sudo buildah push oraclelinux-haskell-builder:latest docker://ghcr.io/$quayiouser/oraclelinux-haskell-builder:latest
 
 after_script:
 - buildah logout quay.io
